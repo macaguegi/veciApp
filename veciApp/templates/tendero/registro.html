@@ -1,0 +1,27 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% block title %} Registro{% endblock %}
+
+{% block body_content%}
+<div class="container">
+    {% if registered %}
+    <h2>Gracias por registrarse. Continue usando VeciApp!</h2>
+    {% else %}
+    <h2>Registrese Aquí</h2>
+    <h3>Llene el formulario : </h3>
+
+    <form class="ui equal width form" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        <input type="submit" value="Registrese">
+    </form>
+
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block footer%}
+{% endblock %}
