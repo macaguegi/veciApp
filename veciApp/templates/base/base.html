@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{%block title%}{% endblock%}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%block headerfiles%}
+    <!-- Aqui van los styles extra-->
+    <link rel="icon" href={%static "images/online-store.png" %}  type="image/png" sizes="16x16">
+    {% endblock%}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+</head>
+
+<body>
+    {%block header%}
+    <!-- Aqui va el contenido que se piensa sobreescribir del encabezado-->
+    <div class="ui fixed inverted segment">
+        <div class="ui inverted secondary pointing menu">
+            <div class="item">
+                    <img src={%static "images/online-store.png" %} alt="Imagen de una tienda" sizes="16x16">
+            </div>
+            <a href="" class="item">
+                Mi Tienda
+            </a>
+            <a href="" class="item">
+                Pedidos
+            </a>
+            <a href="" class="item active">
+                Notificaciones
+            </a>
+        </div>
+    </div>
+    {% endblock%}
+
+    {%block body_content%}
+    <!-- Aqui va el contenido que se piensa sobreescribir del body-->
+    {% endblock%}
+
+
+
+
+
+    {%block footer%}
+    <footer>
+        <!-- Aqui va el contenido que se piensa sobreescribir del footer-->
+        <div class="ui inverted section divider"></div>
+        <!--<img src="assets/images/logo.png" class="ui centered mini image">-->
+        <div class="ui horizontal inverted small divided link list">
+            <a class="item" href="#">Site Map</a>
+            <a class="item" href="#">Contact Us</a>
+            <a class="item" href="#">Terms and Conditions</a>
+            <a class="item" href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    {% endblock%}
+
+
+
+    {%block footerfiles%}
+    <!-- Aqui van los scripts extra -->
+    {% endblock%}
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+</body>
+
+</html>
