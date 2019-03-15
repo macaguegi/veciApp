@@ -1,13 +1,42 @@
-<!DOCTYPE html>
 {% extends "base/base.html" %}
 {% load staticfiles %}
 {% block title %} Mi Tienda {% endblock %}
 
 {% block body_content%}
-<div class="container">
-<h1>Página de Inicio de Proyecto VeciApp</h1>
-</div>
 
+<h1>¡Bienvenido a VeciApp!</h1>
+<div class="ui two column grid">
+<div class="row">
+    <div class="column">
+        <div class="ui card">
+            <div class="image meImage">
+                <img src={% static "images/me2.png" %}>
+            </div>
+            <div class="content">
+                <a class="header">Sobre mí : Camila Guerrero</a>
+                <div class="meta">
+                    <span class="date">Marzo de 2019</span>
+                </div>
+                <div class="description">
+                    <p>Me surgió la idea de este proyecto por la necesidad que tenemos personas
+                        de barrios y localidades muy al sur de Bogotá, de contar con un Servicio
+                        de domicilios y pedidos a tiendas de barrio.
+                    </p>
+                </div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="user icon"></i>
+                    Estudiante
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <h2>Sobre VeciApp</h2>
+    </div>
+</div>
+</div>
 {% endblock %}
 
 {% block footer%}

@@ -12,6 +12,7 @@
     <link rel="icon" href={%static "images/online-store.png" %} type="image/png" sizes="16x16">
     {% endblock%}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href={% static "css/styles.css" %}>
 
 </head>
 
@@ -21,10 +22,10 @@
     <div class="ui fixed inverted segment">
         <div class="ui inverted secondary pointing menu">
             <div class="item">
-                <img src={%static "images/online-store.png" %} alt="Imagen de una tienda" sizes="16x16">
+                <img src={%static "images/title.png" %} alt="Imagen de una tienda" sizes="16x16">
             </div>
             <a href="{% url 'index' %}" class="item">
-                DJANGO
+                Sobre VeciApp
             </a>
             <a href="{% url 'admin:index' %}" class="item">
                 Administrador
@@ -47,10 +48,11 @@
     </div>
     {% endblock%}
 
-    {%block body_content%}
-    <!-- Aqui va el contenido que se piensa sobreescribir del body-->
-    {% endblock%}
-
+    <div class="ui container">
+        {%block body_content%}
+        <!-- Aqui va el contenido que se piensa sobreescribir del body-->
+        {% endblock%}
+    </div>
 
 
 
